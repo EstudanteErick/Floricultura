@@ -1,26 +1,38 @@
 @charset "UTF-8";
 
+:root {
+    --primary-color: #bd1b34;
+    --white: #fff;
+    --black: #000;
+    --nav-height: 70px;
+    --nav-link-font-size: 18px;
+    --mobile-nav-link-font-size: 24px;
+    --nav-padding: 16px;
+    --hamburger-size: 30px;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 a {
     font-family: sans-serif;
     text-decoration: none;
+    color: var(--white); 
 }
 
 .header {
-    background: #bd1b34;
-    box-shadow: 1px 0px 6px black;
-    padding-inline: 16px;
+    background-color: var(--primary-color);
+    box-shadow: 1px 0px 6px var(--black);
+    padding-inline: var(--nav-padding);
 }
 
 .nav {
     max-width: 1280px;
-    height: 70px;
+    height: var(--nav-height);
     margin-inline: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,13 +50,12 @@ a {
 }
 
 .nav-list a {
-    font-size: 18px;
-    color: white;
-    padding-block: 16px;
+    font-size: var(--nav-link-font-size);
+    padding-block: var(--nav-padding);
 }
 
 .hero {
-    height: calc(100vh - 70px);
+    height: calc(100vh - var(--nav-height));
     background: center / cover url("./imagens/Design\ sem\ nome.png");
 }
 
@@ -52,7 +63,7 @@ a {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid white;
+    border-top: 3px solid var(--white);
     cursor: pointer;
 }
 
@@ -60,12 +71,22 @@ a {
 .hamburger::after {
     content: "";
     display: block;
-    width: 30px;
+    width: var(--hamburger-size);
     height: 3px;
-    background: white;
+    background-color: var(--white);
     margin-top: 5px;
     position: relative;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -375px;
+    margin-left: -820px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px #000000bf;
 }
 
 @media (max-width: 767px) {
@@ -80,10 +101,9 @@ a {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #bd1b34;
+        background-color: var(--primary-color);
         clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-out;
-
+        transition: clip-path 1s ease-out;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -92,20 +112,21 @@ a {
     }
 
     .nav-list > a {
-        font-size: 24px;
+        font-size: var(--mobile-nav-link-font-size);
         opacity: 0;
+        transition: opacity 0.5s ease-in-out;
     }
 
     .nav-list li:nth-child(1) a {
-        transition: 0.5s 0.2s;
+        transition-delay: 0.2s;
     }
 
     .nav-list li:nth-child(2) a {
-        transition: 0.5s 0.4s;
+        transition-delay: 0.4s;
     }
 
     .nav-list li:nth-child(3) a {
-        transition: 0.5s 0.6s;
+        transition-delay: 0.6s;
     }
 
     .nav.active .nav-list {
@@ -120,16 +141,31 @@ a {
     .nav.active .hamburger {
         position: fixed;
         top: 26px;
-        right: 16px;
+        right: var(--nav-padding);
         border-top-color: transparent;
     }
 
     .nav.active .hamburger::before {
         transform: rotate(135deg);
     }
-    
+
     .nav.active .hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
+    }
+
+    .hero {
+        background: url("./imagens/flor-mobile.png");
+        background-size: cover;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: -613px;
+        margin-left: 10px;
+        color: white;
+        font-family: "Playfair Display", serif;
+        font-size: 37px;
+        text-shadow: 1px 1px 1px #000000bf;
     }
 }
