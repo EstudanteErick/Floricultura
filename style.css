@@ -89,12 +89,14 @@ h1 {
     text-shadow: 1px 1px 1px #000000bf;
 }
 
-h2 {
+h2#a {
     text-align: center;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 36px;
     margin-top: 180px;
+    position: relative;
+    top: -12px;
 }
 
 h3 {
@@ -117,6 +119,69 @@ a#a {
     margin-left: 146px;
     display: inline-block;
     border: 0;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #e93651;
+    width: 270px;
+    height: 560px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 1px 50px;
+}
+
+.card-imagem {
+    height: 297px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.card h2 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.car-1 {
+    background: url("./imagens/buque-flores.png");
+    margin-left: -10px;
+}
+
+.car-2 {
+    background: url("./imagens/jarro-flores.png");
+    margin-left: -10px;
+}
+
+.car-3 {
+    background: url("./imagens/jarro-girasol.png");
+    background-repeat: no-repeat;
+    margin-left: -23px;
+    top: 32px;
+    position: relative;
+}
+
+.card:hover {
+    background-color: #f8576f;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
 }
 
 @media (max-width: 767px) {
@@ -197,6 +262,16 @@ a#a {
         font-family: "Playfair Display", serif;
         font-size: 37px;
         text-shadow: 1px 1px 1px #000000bf;
+    }
+
+    h2#a {
+        text-align: center;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 36px;
+        margin-top: 130px;
+        position: relative;
+        top: -52px;
     }
 
     h3 {
