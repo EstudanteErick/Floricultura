@@ -106,6 +106,17 @@ h3 {
     margin-top: 25px;
 }
 
+h3#a {
+    color: rgb(0, 189, 0);
+    font-family: arial;
+    text-shadow: 1px 1px 3px black;
+    margin-left: 79px;
+    margin-top: -14px;
+    position: relative;
+    top: 18px;
+    font-size: 28px;
+}
+
 a#a {
     text-decoration: none;
     background: #bd1b34;
@@ -142,6 +153,7 @@ a#a {
     display: block;
     text-align: center;
     margin: 1px 50px;
+    margin-top: 37px;
 }
 
 .card-imagem {
@@ -152,10 +164,19 @@ a#a {
 
 .card h2 {
     padding: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
 }
 
 .card p {
     padding: 10px;
+    text-align: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 26px;
 }
 
 .car-1 {
@@ -280,6 +301,17 @@ a#a {
         text-shadow: 1px 1px 3px black;
         margin-left: 10px;
         margin-top: 15px;
+    }
+
+    h3#a {
+        color: rgb(0, 189, 0);
+        font-family: arial;
+        text-shadow: 1px 1px 3px black;
+        margin-left: 0px;
+        margin-top: -14px;
+        position: relative;
+        top: 18px;
+        font-size: 28px;
     }
 
     a#a {
